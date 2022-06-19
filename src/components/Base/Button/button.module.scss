@@ -1,0 +1,7 @@
+@use '../../../assets/scss/variables' as variables;
+.base-button{
+  padding: variables.$space-8;
+  border-radius: variables.$btn-radius;
+  border: none;
+  cursor: pointer;
+}

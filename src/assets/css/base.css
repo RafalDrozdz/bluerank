@@ -1,0 +1,8 @@
+@font-face {
+ src: url('../fonts/Roboto-Black.ttf');
+ font-family: Roboto;
+}
+
+body{
+ font-family: Roboto, sans-serif;
+}
