@@ -1,0 +1,8 @@
+@use '../../../assets/scss/variables.scss' as variables;
+
+.base-card{
+  padding: variables.$space-32;
+  box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
+  border-radius: variables.$main-radius;
+  width: max-content;
+}
