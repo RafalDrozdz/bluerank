@@ -1,4 +1,8 @@
 {
   "welcome": "Welcome to quiz",
-  "start": "Start"
+  "start": "Start",
+  "next": "Next",
+  "previous": "Previous",
+  "check": "Check",
+  "question": "Question"
 }

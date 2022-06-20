@@ -1,4 +1,14 @@
+@use "src/assets/scss/variables" as variables;
+
 .quiz {
+  display: flex;
+  flex-direction: column;
   width: 50vw;
   height: 50vw;
+  max-height: 80vh;
+
+  &__loader {
+    margin: auto;
+    color: variables.$secondary !important;
+  }
 }

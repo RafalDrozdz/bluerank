@@ -20,7 +20,9 @@
     "paths": {
       "components/*": ["./components/*"],
       "assets/*": ["./assets/*"],
-      "utils/*": ["./utils/*"]
+      "utils/*": ["./utils/*"],
+      "hooks/*": ["./hooks/*"],
+      "types/*": ["./types/*"]
     }
   },
   "include": ["src"]

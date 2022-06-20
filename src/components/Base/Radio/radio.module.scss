@@ -1,0 +1,52 @@
+@use "src/assets/scss/variables" as variables;
+
+.base-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: variables.$space-8;
+  font-size: 1.2rem;
+
+  input {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+
+    &:before {
+      content: "";
+      display: block;
+      width: variables.$space-16;
+      height: variables.$space-16;
+      border: 2px solid variables.$secondary;
+      border-radius: 50%;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      background-color: variables.$secondary;
+      border-radius: 50%;
+      transition: width 0.05s, height 0.05s, left 0.05s;
+    }
+  }
+
+  &--active {
+    input {
+      &:after {
+        width: variables.$space-12;
+        height: variables.$space-12;
+        left: variables.$space-4;
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+}
