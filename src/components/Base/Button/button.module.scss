@@ -1,7 +1,32 @@
-@use '../../../assets/scss/variables' as variables;
-.base-button{
-  padding: variables.$space-8;
-  border-radius: variables.$btn-radius;
+@use "src/assets/scss/variables" as variables;
+
+.base-button {
+  padding: 0 0 variables.$space-4 0;
+  border-radius: variables.$main-radius;
   border: none;
   cursor: pointer;
+  transition: padding 0.05s, margin-top 0.05s;
+  background-color: variables.$cadetblue;
+  font-size: 1.2rem;
+
+  &:before {
+    content: attr(data-text);
+    display: block;
+    padding: variables.$space-12;
+    border-radius: variables.$main-radius;
+    border: none;
+    cursor: pointer;
+    background-color: variables.$secondary;
+    color: variables.$white;
+    font-size: 1.2rem;
+  }
+
+  &--active {
+    padding: 0;
+    margin-top: variables.$space-4;
+  }
 }
+
+//.base-button--active {
+//  padding: variables.$space-12;
+//}

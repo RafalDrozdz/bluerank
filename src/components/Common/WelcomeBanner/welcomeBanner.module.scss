@@ -1,3 +1,24 @@
-.welcome-banner{
-  text-align: center;
+@use "src/assets/scss/variables" as variables;
+
+.welcome-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: variables.$space-16;
+  width: 50vw;
+  height: 50vw;
+  min-width: 260px;
+  min-height: 260px;
+  max-width: 500px;
+  max-height: 500px;
+
+  svg {
+    color: variables.$yellow;
+    font-size: 2rem;
+  }
+}
+
+.welcome-banner__start-btn {
+  width: 200px;
 }

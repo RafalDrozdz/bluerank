@@ -1,10 +1,12 @@
-import React from "react";
-import { WelcomeBanner } from "components";
+import React, { useState } from "react";
+import { Quiz, WelcomeBanner } from "components";
+import styles from "./app.module.scss";
 
 function App() {
+  const [isWelcome, setIsWelcome] = useState(true);
   return (
-    <div className="App">
-      <WelcomeBanner />
+    <div className={styles.app}>
+      {isWelcome ? <WelcomeBanner setIsWelcome={setIsWelcome} /> : <Quiz />}
     </div>
   );
 }
