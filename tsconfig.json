@@ -22,7 +22,8 @@
       "assets/*": ["./assets/*"],
       "utils/*": ["./utils/*"],
       "hooks/*": ["./hooks/*"],
-      "types/*": ["./types/*"]
+      "types/*": ["./types/*"],
+      "helpers/*": ["./helpers/*"]
     }
   },
   "include": ["src"]

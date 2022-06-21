@@ -26,13 +26,13 @@
       content: "";
       position: absolute;
       top: 50%;
-      left: 10px;
+      left: variables.$space-12;
       transform: translateY(-50%);
       width: 0;
       height: 0;
       background-color: variables.$secondary;
       border-radius: 50%;
-      transition: width 0.05s, height 0.05s, left 0.05s;
+      transition: width 0.1s, height 0.1s, left 0.1s;
     }
   }
 

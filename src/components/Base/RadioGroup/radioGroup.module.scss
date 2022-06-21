@@ -1,0 +1,7 @@
+@use "src/assets/scss/variables" as variables;
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-16;
+}

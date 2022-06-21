@@ -3,4 +3,5 @@ export interface RadioPropsI {
   name: string;
   label: string;
   checked: boolean;
+  onChange: () => void;
 }
