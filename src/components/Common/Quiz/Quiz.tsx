@@ -16,9 +16,10 @@ function Quiz() {
 
   useEffect(() => {
     setSelectedIds(data?.results.map(() => null) ?? []);
-  }, [data]);
+  }, [data?.results]);
 
   useEffect(() => {
+    console.log({ selectedIds });
     resultsContext?.setResults(selectedIds);
     resultsContext?.setCorrectAnswers(
       data?.results.filter((item) => selectedIds.includes(item.correct_answer))

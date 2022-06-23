@@ -18,7 +18,9 @@ function QuizContent({
   const answers = useMemo(
     () =>
       (question
-        ? [...question.incorrect_answers, question.correct_answer]
+        ? [...question.incorrect_answers, question.correct_answer].sort(
+            () => 0.5 - Math.random()
+          )
         : []
       ).map((answer: string) => ({
         id: answer,

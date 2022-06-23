@@ -4,5 +4,7 @@
   "next": "Next",
   "previous": "Previous",
   "check": "Check",
-  "question": "Question"
+  "question": "Question",
+  "yourScore": "Your score",
+  "congratulations": "Congratulations"
 }
