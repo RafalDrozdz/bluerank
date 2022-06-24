@@ -4,3 +4,4 @@ export * from "./Loader";
 export * from "./Radio";
 export * from "./RadioGroup";
 export * from "./Error";
+export * from "./Select";

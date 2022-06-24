@@ -1,0 +1,30 @@
+@use "src/assets/scss/variables";
+
+.base-select__btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: variables.$space-8;
+  width: 100%;
+  border: 2px solid variables.$secondary;
+  border-radius: variables.$small-radius;
+  cursor: pointer;
+  background-color: variables.$white;
+  text-align: left;
+
+  &-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }
+
+  &-arrow {
+    color: variables.$cadetblue;
+    transition: transform 0.3s;
+    padding: 0 variables.$space-8;
+    &--active {
+      transform: rotate(-180deg);
+    }
+  }
+}

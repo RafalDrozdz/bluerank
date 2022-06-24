@@ -10,7 +10,7 @@ function WelcomeBanner({ setIsWelcome }: WelcomeBannerPropsI) {
   return (
     <Card className={styles["welcome-banner"]}>
       <h1>
-        {t("welcome")} <FontAwesomeIcon icon={faLightbulb} />
+        {t("welcome")} <FontAwesomeIcon icon={faLightbulb} aria-hidden="true" />
       </h1>
       <Button
         onClick={() => setIsWelcome(false)}

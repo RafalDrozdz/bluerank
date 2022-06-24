@@ -1,0 +1,43 @@
+@use "src/assets/scss/variables";
+
+.base-select__list {
+  position: absolute;
+  list-style: none;
+  top: calc(100% - 2px);
+  padding: 0;
+  margin: 0;
+  border: 2px solid variables.$secondary;
+  border-radius: variables.$small-radius;
+  z-index: variables.$select-list-z-index;
+  background-color: variables.$white;
+  width: 100%;
+
+  &-item {
+    width: 100%;
+    border-bottom: 2px solid variables.$secondary;
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &-btn {
+    text-align: left;
+    padding: variables.$space-8;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: variables.$white;
+    cursor: pointer;
+
+    &--active {
+      background-color: variables.$cadetblue;
+      color: variables.$white;
+    }
+
+    &:hover {
+      background-color: variables.$secondary;
+      color: variables.$white;
+    }
+  }
+}

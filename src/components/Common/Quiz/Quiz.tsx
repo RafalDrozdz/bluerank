@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import {
   QuizFooter,
   Card,
@@ -6,12 +6,14 @@ import {
   Loader,
   Button,
   Error,
+  Select,
 } from "components";
 import { useFetch } from "hooks";
-import { QuizI } from "types/quiz.types";
+import { QuestionI, QuizI } from "types/quiz.types";
 import styles from "./quiz.module.scss";
 import { ResultsContext } from "helpers/context";
 import { useTranslation } from "react-i18next";
+import { SelectListItemI } from "components/Base/Select/select.types";
 
 function Quiz() {
   const { t } = useTranslation();
@@ -41,6 +43,15 @@ function Quiz() {
     );
   };
 
+  const selectList = useMemo<SelectListItemI[]>(
+    () =>
+      data?.results.map((question: QuestionI, index: number) => ({
+        id: index,
+        text: question.question,
+      })) ?? [],
+    [data]
+  );
+
   return (
     <Card className={styles.quiz}>
       {loading ? (
@@ -59,6 +70,11 @@ function Quiz() {
         </>
       ) : (
         <>
+          <Select
+            list={selectList}
+            selectedId={actualQuestion}
+            setId={setActualQuestion}
+          />
           <QuizContent
             question={data?.results[actualQuestion]}
             actualQuestion={actualQuestion}
