@@ -1,8 +1,8 @@
+import { useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { RadioGroup } from "components";
 import { QuizContentPropsI } from "./quizContent.types";
 import styles from "./quizContent.module.scss";
-import { useEffect, useMemo, useState } from "react";
-import { RadioGroup } from "components";
 
 function QuizContent({
   question,

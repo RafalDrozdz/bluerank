@@ -22,3 +22,14 @@
 .welcome-banner__start-btn {
   width: 200px;
 }
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .welcome-banner {
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    max-height: none;
+    max-width: none;
+    border-radius: 0;
+  }
+}

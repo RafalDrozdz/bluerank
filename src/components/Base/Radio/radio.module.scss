@@ -4,8 +4,9 @@
   position: relative;
   display: flex;
   align-items: center;
-  gap: variables.$space-8;
   font-size: 1.2rem;
+  cursor: pointer;
+  width: max-content;
 
   input {
     -moz-appearance: none;
@@ -48,5 +49,6 @@
 
   label {
     cursor: pointer;
+    padding-left: variables.$space-8;
   }
 }

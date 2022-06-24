@@ -1,5 +1,8 @@
+@use "src/assets/scss/variables" as variables;
+
 .quiz-footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
 }

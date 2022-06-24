@@ -8,6 +8,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   const [results, setResults] = useState<(string | null)[]>([]);
   const [correctAnswers, setCorrectAnswers] = useState(0);
+  const [rerender, setRerender] = useState(new Date().toISOString());
 
   return (
     <ResultsContext.Provider
@@ -15,9 +16,11 @@ function App() {
         results,
         isChecked,
         correctAnswers,
+        rerender,
         setResults,
         setIsChecked,
         setCorrectAnswers,
+        setRerender,
       }}
     >
       <div className={styles.app}>
@@ -29,7 +32,7 @@ function App() {
             numberOfAnswers={results.length}
           />
         ) : (
-          <Quiz />
+          <Quiz key={rerender} />
         )}
       </div>
     </ResultsContext.Provider>

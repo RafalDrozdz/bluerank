@@ -1,9 +1,16 @@
-@use 'src/assets/scss/variables.scss' as variables;
+@use "src/assets/scss/variables.scss" as variables;
 
-.base-card{
+.base-card {
   padding: variables.$space-32;
   box-shadow: 0 5px 15px rgb(0 0 0 / 0.1);
   border-radius: variables.$main-radius;
   width: max-content;
   background-color: variables.$white;
+  margin: variables.$space-16;
+}
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .base-card {
+    margin: 0;
+  }
 }

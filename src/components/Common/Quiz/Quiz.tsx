@@ -1,11 +1,20 @@
 import { useContext, useEffect, useState } from "react";
-import { QuizFooter, Card, Loader, QuizContent } from "components";
+import {
+  QuizFooter,
+  Card,
+  QuizContent,
+  Loader,
+  Button,
+  Error,
+} from "components";
 import { useFetch } from "hooks";
 import { QuizI } from "types/quiz.types";
 import styles from "./quiz.module.scss";
 import { ResultsContext } from "helpers/context";
+import { useTranslation } from "react-i18next";
 
 function Quiz() {
+  const { t } = useTranslation();
   const resultsContext = useContext(ResultsContext);
   const [actualQuestion, setActualQuestion] = useState(0);
   const [selectedIds, setSelectedIds] = useState<(string | null)[]>([]);
@@ -19,7 +28,6 @@ function Quiz() {
   }, [data?.results]);
 
   useEffect(() => {
-    console.log({ selectedIds });
     resultsContext?.setResults(selectedIds);
     resultsContext?.setCorrectAnswers(
       data?.results.filter((item) => selectedIds.includes(item.correct_answer))
@@ -37,6 +45,18 @@ function Quiz() {
     <Card className={styles.quiz}>
       {loading ? (
         <Loader className={styles.quiz__loader} />
+      ) : error || !data?.results.length ? (
+        <>
+          <Error />
+          <Button
+            onClick={() =>
+              resultsContext?.setRerender(new Date().toISOString())
+            }
+            className={styles.quiz__error}
+          >
+            {t("tryAgain")}
+          </Button>
+        </>
       ) : (
         <>
           <QuizContent

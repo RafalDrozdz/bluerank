@@ -6,5 +6,8 @@
   "check": "Check",
   "question": "Question",
   "yourScore": "Your score",
-  "congratulations": "Congratulations"
+  "congratulations": "Congratulations",
+  "playAgain": "Play Again",
+  "somethingWentWrong": "Something went wrong",
+  "tryAgain": "Try again"
 }

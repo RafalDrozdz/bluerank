@@ -1,0 +1,8 @@
+@use "src/assets/scss/variables" as variables;
+
+.base-error {
+  display: grid;
+  place-items: center;
+  font-size: 1.3rem;
+  height: 100%;
+}

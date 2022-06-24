@@ -5,10 +5,29 @@
   flex-direction: column;
   width: 50vw;
   height: 50vw;
+  min-height: 400px;
   max-height: 500px;
+  min-width: 260px;
 
   &__loader {
     margin: auto;
     color: variables.$secondary !important;
+  }
+
+  &__error {
+    width: 50%;
+    min-width: 160px;
+    margin: auto;
+  }
+}
+
+@media (max-width: variables.$breakpoint-mobile) {
+  .quiz {
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
+    max-height: none;
+    max-width: none;
+    border-radius: 0;
   }
 }
