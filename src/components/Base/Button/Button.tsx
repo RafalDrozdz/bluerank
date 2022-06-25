@@ -28,6 +28,7 @@ function Button({ children, className, disabled, onClick }: ButtonPropsI) {
       onClick={onClick}
       onMouseDown={() => setIsMouseDown(true)}
       onTouchStart={() => setIsMouseDown(true)}
+      onTouchEnd={() => setIsMouseDown(false)}
       onMouseUp={() => setIsMouseDown(false)}
       data-text={children}
     />

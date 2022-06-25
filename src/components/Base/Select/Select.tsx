@@ -3,7 +3,7 @@ import { SelectBtn, SelectList } from "components";
 import { useTranslation } from "react-i18next";
 import { SelectListItemI, SelectPropsI } from "./select.types";
 import styles from "./select.module.scss";
-import useOutside from "hooks/useOutside";
+import { useOutside } from "hooks";
 
 function Select({ list, selectedId, setId }: SelectPropsI) {
   const { t } = useTranslation();
