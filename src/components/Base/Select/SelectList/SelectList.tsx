@@ -11,7 +11,7 @@ function SelectList({ selectedId, list, setId, setIsOpen }: SelectListPropsI) {
   return (
     <ul className={styles["base-select__list"]}>
       {list.map((item: SelectListItemI) => (
-        <li className={styles["base-select__list-item"]}>
+        <li className={styles["base-select__list-item"]} key={item.id}>
           <button
             onClick={() => handleClick(item.id)}
             className={`${styles["base-select__list-btn"]}${
