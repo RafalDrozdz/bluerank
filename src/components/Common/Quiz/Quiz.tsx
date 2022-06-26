@@ -22,7 +22,7 @@ function Quiz() {
   const [selectedIds, setSelectedIds] = useState<(string | null)[]>([]);
 
   const [data, loading, error] = useFetch<QuizI>(
-    "https://opentdb.com/api.php?amount=5"
+    `${process.env.REACT_APP_API}?amount=5`
   );
 
   useEffect(() => {
